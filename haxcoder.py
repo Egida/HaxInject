@@ -1,7 +1,7 @@
 import requests
 
 url = 'https://goheadar.blogspot.com/'
-arq = open ('passwords.txt', 'r').readlines()
+arq = open ('password.txt', 'r').readlines()
 
 for line in arq:
 	password = line.strip()
