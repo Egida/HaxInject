@@ -10,7 +10,7 @@ for line in exploit:
 
 if 'Search Facebook' in content:
           print "password found " + password + " "
-          break
+          
 else:
          print "invalid" + password+ " "
 
