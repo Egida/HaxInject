@@ -106,9 +106,9 @@ class FaceBoom(object):
         proxystatus = gr+self.useProxy+wi+"["+gr+"ON"+wi+"]" if self.useProxy  else yl+"["+rd+"OFF"+yl+"]"
         print(gr+"""
 ==================================
-[---]        """+wi+"""Haxcoder BruteForce"""+gr+"""        [---]
+[---]        """+wi+"""Haxcoder"""+gr+"""        [---]
 ==================================
-[---]  """+wi+"""BruteForce """+gr+""" [---]
+[---]  """+wi+"""Phish Brute Injection"""+gr+""" [---]
 ==================================
 [---]         """+yl+"""CONFIG"""+gr+"""         [---]
 ==================================
@@ -231,7 +231,7 @@ def Main():
                     if retCode == 2:print(wi+"["+yl+"!"+wi+"]"+yl+" Warning: This account use ("+rd+"2F Authentication"+yl+"):"+rd+" It's Locked"+yl+" !!!")
                     break
                 else:
-                    sys.stdout.write(yl+" ==> Injected"+rd+" Success\n")
+                    sys.stdout.write(yl+" ==> Injected"+gr+" Success\n")
                     loop = loop + 1 if not single_passwd else "~"
         else:
                 if single_passwd:
