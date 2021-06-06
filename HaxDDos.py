@@ -68,7 +68,7 @@ def buildblock(size):
 
 def usage():
 	print '---------------------------------------------------'
-	print 'USAGE: kojix.py <url> (ex. HaxDDos.py http://www.gov.ph)'
+	print 'USAGE: kojix.py <url> (ex. kojix.py http://www.gov.ph)'
 	print 'you can add "safe" after url, to autoshut after dos'
 	print '---------------------------------------------------'
 
